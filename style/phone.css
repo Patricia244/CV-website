@@ -1,0 +1,477 @@
+/* home */
+#home { 
+  margin-top: 190px;
+}
+
+ #home h1{
+  font-size: 30px;
+  margin: 0px;
+ }
+
+/* navbar */
+nav .navbar{
+  z-index: 3;
+}
+
+
+.navbar-links ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 350px;
+  background-color: #000000dc;
+  align-items: center;
+}
+
+.navbar ul li {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  padding: 15px 0px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-btn {
+  display: flex;
+}
+
+.navbar-links {
+  display: none;
+  width: 100%;
+}
+
+.navbar-links{
+  background-color: #000000dc;
+  }
+
+.navbar {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  position:fixed;
+}
+
+.navbar ul li {
+  padding: 15px 0px;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+
+.navbar {
+  z-index: 2;
+}
+
+/* about */
+#about {
+  width: 80%;
+  height: 1000px;
+  padding: 20px;
+  border-radius: 20px;
+  height: auto;
+}
+
+.name p {
+  font-size: 1em;
+}
+
+#about img {
+  width: 100%;
+  height: 100%;
+  padding: 0px 15px;
+  margin-top: 10%;
+}
+
+/* skills */
+#skills {
+  display: flex;
+  flex-direction: column;
+  /* height: 80vh; */
+}
+
+.parent-container {
+width: 100vw;
+/* height: 80vh; */
+}
+
+.columns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  background-color: #8e94f2;
+  border-radius: 20%;
+  height:25rem;
+  width: 20rem;
+}
+
+.tech {
+  display: flex;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+  padding: 0;
+}
+
+
+.tech img {
+  max-width: 80px;
+  height: auto;
+}
+
+/* portfolio */
+#portfolio {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.gallery
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.gallery .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px;
+  /* height: 100vh; */
+  width: 100%;
+}
+
+.front img,
+.front1 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+#card2 img{
+  width: 330px;
+  height: 200px;
+  border-radius: 20px 
+}
+
+.back,
+.front,
+.back1,
+.front1 {
+  height: 200px;
+  width: 200px;
+}
+
+.back p,
+.back1 p {
+  color: rgb(164, 219, 13);
+  font-size: 15px;
+  font-family: "Bodoni Moda", serif;
+}
+
+.back h1,
+.back1 h1 {
+  color: rgb(164, 219, 13);
+  font-size: 15px;
+  font-family: "Bodoni Moda", serif;
+}
+
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.card {
+  display: flex;
+  perspective: 1000px;
+  max-width: 100%;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: center center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+  transform: rotateY(0deg);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+
+
+form{             
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  display: none;
+}
+
+.navbar{
+  position:fixed;
+}
+
+nav .navbar{
+  z-index: 3;
+}
+
+/*about */
+.about img {
+  padding: 0px 20px;
+  width: 300px;
+  height: 300px;
+}
+
+.name {
+  padding: 5px;
+}
+
+.name h2 {
+  font-size: 1.7rem;
+}
+
+.name p {
+  font-size: 1rem;
+}
+/* contact */
+#contact {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height:auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact h1 {
+  display: flex;
+  margin-top: 0%;
+  color: #5e548e;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  background-color: #8e94f2;
+  max-width: 800px;
+  border-radius: 15%;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0 auto;
+}
+
+.social-container{
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+
+#message{
+  height: 100px;
+}
+
+#submit {
+  margin-top: 2px;
+  width: 100px;
+}
+
+/* media 280px*/
+@media screen and (max-width: 280px) {
+  body{
+    overflow-y: auto;
+  }
+
+  .navbar-links ul {
+    margin-top: 121%;
+  }
+
+  #home { 
+    margin-top: 130px;
+  }
+
+   #home h1{
+    font-size: 30px;
+   }
+  
+ .heading{
+  font-size: 20px;
+ }
+
+#portfolio {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.gallery .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.front img,
+.front1 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+#card2 img{
+  width: 13rem;
+  height: 13rem;
+  border-radius: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30%;
+}
+
+.card {
+  display: flex;
+  perspective: 1000px;
+  max-width: 100%;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: center center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+  .front {
+    transform: rotateY(0deg);
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+
+  .flipped {
+    transform: rotateY(180deg);
+  }
+
+  .back,
+  .front,
+  .back1,
+  .front1 {
+    width: 200px;
+    height: 200px;
+  }
+
+
+  .back p,
+.back1 p {
+  color: rgb(164, 219, 13);
+  font-size: 15px;
+  font-family: "Bodoni Moda", serif;
+}
+
+.back h1,
+.back1 h1 {
+  color: rgb(164, 219, 13);
+  font-size: 15px;
+  font-family: "Bodoni Moda", serif;
+}
+
+.about img {
+  padding: 0px 20px;
+  width: 150px;
+  height: 300px;
+}
+
+
+  .about {
+    font-size: 12px;
+}
+
+.img{
+  height: 100px;
+  width: 100px;
+  display:flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* #skills{
+  height: 80vh;
+} */
+}

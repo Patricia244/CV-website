@@ -1,0 +1,35 @@
+/* skills */
+.navbar{
+  position:fixed;
+  z-index: 3;
+}
+
+/* portfolio */
+.about img {
+  padding: 0px 20px;
+  width: 400px;
+  height: 300px;
+}
+
+.name {
+  padding: 5px;
+}
+
+.name h2 {
+  font-size: 1.7rem;
+}
+
+.name p {
+  font-size: 1rem;
+}
+
+#portfolio{
+  height: 70vh;
+}
+.gallery .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
