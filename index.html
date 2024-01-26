@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Silindile Madlala Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap"
       rel="stylesheet"
-    >
-    <link rel="stylesheet" href="./style/style.css" >
-    
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+
     <link
       rel="stylesheet"
       media="screen and (max-width:1180px)"
       href="./style/tablet.css"
-    >
+    />
     <link
       rel="stylesheet"
       media="screen and (max-width:1000px)"
       href="./style/phone1.css"
-    >
+    />
     <link
       rel="stylesheet"
       media="screen and (max-width:695px)"
       href="./style/phone.css"
-    >
+    />
     <script
       src="https://kit.fontawesome.com/4fcd54d10c.js"
       crossorigin="anonymous"
@@ -42,26 +42,132 @@
       </a>
       <div class="navbar-links">
         <ul>
-          <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="about.html"> About</a></li>
-          <li class="nav-item"><a href="skills.html">Skills</a></li>
-          <li class="nav-item"><a href="projects.html">Projects</a></li>
-          <li class="nav-item"><a href="contact.html">Contact Me</a></li>
+          <li class="nav-item"><a href="#home-section">Home</a></li>
+          <li class="nav-item"><a href="#about-section"> About</a></li>
+          <li class="nav-item"><a href="#skills-section">Skills</a></li>
+          <li class="nav-item"><a href="#contact-section">Contact Me</a></li>
         </ul>
       </div>
     </nav>
-  
-    <div id="home">
-      <div id="heading">
+    <section id="home-section">
+      <div id="home">
         <h1 class="heading">
-          HI, I AM <br>
+          HI, I AM <br />
           SILINDILE MADLALA
         </h1>
-        <p>web developer <br>
+        <p>
+          web developer <br />
           <a class="cvLink" href="./silindile-madlala-cv.pdf" target="_blank">
-            see cv</a> <br>
+            see cv</a
+          >
+          <br />
         </p>
       </div>
-    </div>
+    </section>
+
+    <section id="about-section">
+      <div id="about">
+        <img id="about-img" src="./images/about.jpeg" alt="My Pic" />
+        <div id="about-text">
+          <h1 class="heading">ABOUT ME</h1>
+          <h2>Web  <span>Developer</span></h2>
+          <p>
+            I'm a dedicated web developer who can learn and collaborate in a
+            rapidly changing environment and compositions. I am eager to
+            contribute to the success of the team. Excellent organizational and
+            detail-oriented abilities. Passionate about learning and growing
+            within the industry; while concentrating on the company's
+            development. I'm tenacious and flexible in problem-solving, and I
+            excel at meeting and exceeding company goals through foresight.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills-section">
+      <div id="skills">
+        <h1 class="heading">SKILLS</h1>
+        <div class="parent-container">
+          <div class="columns">
+            <div class="box" id="technical">
+              <div class="tech">
+                <img src="./images/html_4943029.png" alt="html" />
+                <span>HTML</span>
+              </div>
+              <div class="tech">
+                <img src="./images/css_919826.png" alt="css" />
+                <span>CSS</span>
+              </div>
+              <div class="tech">
+                <img src="./images/java-script_1199124.png" alt="JAVASCRIPT" />
+                <span>JAVASCRIPT</span>
+              </div>
+              <div class="tech">
+                <img src="./images/sql-server_4492311.png" alt="sql" />
+                <span>SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="contact-section">
+      <div id="contact">
+        <h1 class="heading">CONTACT</h1>
+        <div class="form">
+          <form
+            action="https://formsubmit.co/patriciaslindile5@gmail.com"
+            method="POST"
+            class="form"
+            id="form"
+            name="form"
+            onsubmit="return validate()"
+          >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="input"
+              placeholder="Enter Your Name"
+            />
+            <div id="name-error">Please enter your name</div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="input"
+              placeholder="Enter Your Email"
+            />
+            <div id="email-error">Please fill up Email or Phone Number</div>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Enter Your Message"
+            ></textarea>
+            <div id="message-error">please enter at least 30 characters</div>
+            <input type="submit" value="Send" id="submit" />
+          </form>
+        </div>
+      </div>
+      <div class="social-container">
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/silindile-madlala-4799241a7/"
+            target="blank"
+          >
+            <i class="fab fa-linkedin"></i
+          ></a>
+  
+          <a href="https://github.com/Patricia244" target="blank">
+            <i class="fab fa-github"></i
+          ></a>
+  
+          <a href="tel:0738918236">
+            <i class="fa fa-phone-square" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+    </section>  -->
   </body>
 </html>
