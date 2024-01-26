@@ -11,19 +11,19 @@ message.addEventListener("textInput", message_Verify);
 
 function validate() {
   if (names.value.length === 0) {
-    names.style.border = "1px solid red";
+    names.style.border = "3px solid red";
     nameError.style.display = "block";
     names.focus();
     return false;
   }
   if (email.value.length < 9) {
-    email.style.border = "1px solid red";
+    email.style.border = "3px solid red";
     emailError.style.display = "block";
     names.focus();
     return false;
   }
   if (message.value.length === 0) {
-    message.style.border = "1px solid red";
+    message.style.border = "3px solid red";
     messageError.style.display = "block";
     names.focus();
     return false;
