@@ -1,0 +1,23 @@
+{
+  "name": "cv-website",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/Patricia244/patricia244.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patricia244/CV-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Patricia244/CV-website/issues"
+  },
+  "homepage": "https://github.com/Patricia244/CV-website#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1"
+  }
+}
