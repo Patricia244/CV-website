@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admins</title>
+</head>
+<body>
+    <div class="form" id="visitor-form">
+        <form
+          action="/new_admin"
+          method="POST"
+          class="form"
+          id="form"
+          name="form"
+          onsubmit="return validate()"
+        >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="input"
+            placeholder="Enter Your Name"
+          />
+          <div id="name-error">Please enter your name</div>
+        
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="input"
+            placeholder="Enter Your password"
+          />
+          <div id="email-error">Please fill up Email or Phone Number</div>
+          <input type="submit" value="Submit" id="submit" />
+        </form>
+      </div>
+</body>
+</html>
