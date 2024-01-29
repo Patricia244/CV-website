@@ -16,9 +16,9 @@ connection.once('open', function () {
 });
 
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static("public"));
-app.use(express.static("public/style.css"));
 app.use(express.json())
+app.use('/public', express.static(path.join(__dirname, 'public')))
+
 
 const visitorsRoute = require('./routes/visitorsRoute.js')
 app.use('', visitorsRoute)
