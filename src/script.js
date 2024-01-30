@@ -1,8 +1,6 @@
 const toggleBtn = document.getElementsByClassName("toggle-btn")[0];
 const navbarLinks = document.getElementsByClassName("navbar-links")[0];
 const navItems = document.querySelectorAll(".nav-item");
-const apiUrl = process.env.API_URL
-
 toggleBtn.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
 });
@@ -25,44 +23,44 @@ function submitForm() {
   const dateInput = document.getElementById('date');
 
   const formData = {
-    name: nameInput.value,
-    email: emailInput.value,
-    message: messageInput.value
+      name: nameInput.value,
+      email: emailInput.value,
+      message: messageInput.value
   };
 
-  fetch('apiUrl/new_visitor', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
+  fetch('/new_visitor', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
   })
-    .then(response => response.json())
-    .then(data => {
+  .then(response => response.json())
+  .then(data => {
 
       if (data.success) {
-        setTimeout(() => {
-          successMessage.innerHTML = '';
-        }, 5000)
-        successMessage.innerHTML = 'Form submitted successfully!';
-        nameInput.value = '';
-        emailInput.value = '';
-        messageInput.value = '';
-        dateInput.value = '';
+      setTimeout(()=>{
+ successMessage.innerHTML = 'Form submitted successfully!';
+      })
+         
+          nameInput.value = '';
+          emailInput.value = '';
+          messageInput.value = '';
+          dateInput.value='';
       } else {
-        console.error('Form submission failed:', data.message);
+          console.error('Form submission failed:', data.message);
       }
-    })
-    .catch(error => {
+  })
+  .catch(error => {
       console.error('Error submitting form:', error);
-    });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('form').addEventListener('submit', function (event) {
-    console.log("Form submitted");
-    event.preventDefault();
-    submitForm();
+      console.log("Form submitted");
+      event.preventDefault();
+      submitForm();
   });
 });
 
