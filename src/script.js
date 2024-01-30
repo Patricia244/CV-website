@@ -23,43 +23,44 @@ function submitForm() {
   const dateInput = document.getElementById('date');
 
   const formData = {
-      name: nameInput.value,
-      email: emailInput.value,
-      message: messageInput.value
+    name: nameInput.value,
+    email: emailInput.value,
+    message: messageInput.value
   };
 
   fetch('https://personal-website-y81r.onrender.com/new_visitor', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
+    mode: 'no-cors',
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
   })
-  .then(response => response.json())
-  .then(data => {
+    .then(response => response.json())
+    .then(data => {
 
       if (data.success) {
-      setTimeout(()=>{
- successMessage.innerHTML = 'Form submitted successfully!';
-      })
-         
-          nameInput.value = '';
-          emailInput.value = '';
-          messageInput.value = '';
-          dateInput.value='';
+        setTimeout(() => {
+          successMessage.innerHTML = 'Form submitted successfully!';
+        })
+
+        nameInput.value = '';
+        emailInput.value = '';
+        messageInput.value = '';
+        dateInput.value = '';
       } else {
-          console.error('Form submission failed:', data.message);
+        console.error('Form submission failed:', data.message);
       }
-  })
-  .catch(error => {
+    })
+    .catch(error => {
       console.error('Error submitting form:', error);
-  });
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      submitForm();
+    event.preventDefault();
+    submitForm();
   });
 });
 
