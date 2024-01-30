@@ -1,32 +1,32 @@
 const express = require("express");
 const router = express.Router();
-const AdminModel =require("../model/adminModel")
+const AdminModel = require("../model/adminModel")
+const VisitorsModel = require("../model/visitorModel")
+const authMiddleware = require('../middleware/authMiddleware');
 
-//post a visitor
 
-router.post("/new_admin", async (req, res) => {
 
-    const { adminName,password} = req.body
-    const admin= new AdminModel({
-        adminName: adminName,
-        password:password
-    });
+router.post("/login", async (req, res) => {
+    const { userName, password } = req.body
     try {
-        const newAdmin= await admin.save()
-        res.json(newAdmin);
+       const admin = await  AdminModel.findOne({userName})
+       if(!admin || admin.password !== password){
+        return res.status(401).json({message:"Invalid username or password"})
+       }
+      
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 });
 
-//get a visitor
-router.get("/new_admin", async (req, res) => {
-    try {
-        const admins = await VisitorsModel.find();
-        res.status(201).send(admins);
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-});
+// router.get("/login", async (req, res) => {
+//     try {
+//         router.use(authMiddleware);
+//         const visitors = await VisitorsModel.find();
+//         res.status(201).send(visitors);
+//     } catch (error) {
+//         res.status(500).json({ message: error.message });
+//     }
+// });
 
 module.exports = router;
