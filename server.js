@@ -15,8 +15,6 @@ connection.once('open', function () {
 });
 
 app.use(cors());
-//app.use(cors({ origin: 'https://strong-nasturtium-61fa5a.netlify.app' }))
-
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 app.use('/public', express.static(path.join(__dirname, 'public')))
@@ -28,10 +26,5 @@ app.get("/new_visitor", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-const adminRoute = require('./routes/adminRoutes.js')
-app.use('', adminRoute)
-app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, "admin.html"));
-});
-
-app.listen(process.env.PORT, () => console.log(`server listening on http://localhost:${process.env.PORT}/new_visitor`))
+ const port = process.env.PORT
+app.listen(port)
