@@ -29,7 +29,6 @@ function submitForm() {
   };
 
   fetch('https://personal-website-y81r.onrender.com/new_visitor', {
-    mode: 'no-cors',
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

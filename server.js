@@ -15,7 +15,7 @@ connection.once('open', function () {
 });
 
 app.use(cors());
-app.use(cors({ origin: 'https://strong-nasturtium-61fa5a.netlify.app' }))
+//app.use(cors({ origin: 'https://strong-nasturtium-61fa5a.netlify.app' }))
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
