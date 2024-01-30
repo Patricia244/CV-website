@@ -14,52 +14,49 @@ navItems.forEach((item) => {
   }
 });
 
-const successMessage = document.getElementById('success-message');
+const successMessage = document.getElementById("success-message");
 function submitForm() {
-
-  const nameInput = document.getElementById('name');
-  const emailInput = document.getElementById('email');
-  const messageInput = document.getElementById('message');
-  const dateInput = document.getElementById('date');
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+  const dateInput = document.getElementById("date");
 
   const formData = {
     name: nameInput.value,
     email: emailInput.value,
-    message: messageInput.value
+    message: messageInput.value,
   };
 
-  fetch('https://personal-website-y81r.onrender.com/new_visitor', {
-    method: 'POST',
+  fetch("https://personal-website-y81r.onrender.com/new_visitor", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(formData)
+    body: JSON.stringify(formData),
   })
-    .then(response => response.json())
-    .then(data => {
-
+    .then((response) => response.json())
+    .then((data) => {
       if (data.success) {
         setTimeout(() => {
-          successMessage.innerHTML = 'Form submitted successfully!';
-        })
-
-        nameInput.value = '';
-        emailInput.value = '';
-        messageInput.value = '';
-        dateInput.value = '';
+          successMessage.innerHTML = "";
+        });
+        successMessage.innerHTML = "Form submitted successfully!";
+        nameInput.value = "";
+        emailInput.value = "";
+        messageInput.value = "";
+        dateInput.value = "";
       } else {
-        console.error('Form submission failed:', data.message);
+        console.error("Form submission failed:", data.message);
       }
     })
-    .catch(error => {
-      console.error('Error submitting form:', error);
+    .catch((error) => {
+      console.error("Error submitting form:", error);
     });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('form').addEventListener('submit', function (event) {
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("form").addEventListener("submit", function (event) {
     event.preventDefault();
     submitForm();
   });
 });
-
