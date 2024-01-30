@@ -1,7 +1,7 @@
 const toggleBtn = document.getElementsByClassName("toggle-btn")[0];
 const navbarLinks = document.getElementsByClassName("navbar-links")[0];
 const navItems = document.querySelectorAll(".nav-item");
-
+const apiUrl = process.env.API_URL
 
 toggleBtn.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
@@ -30,7 +30,7 @@ function submitForm() {
     message: messageInput.value
   };
 
-  fetch('/new_visitor', {
+  fetch('gapiUrl/new_visitor', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
