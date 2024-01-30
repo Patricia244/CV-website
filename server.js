@@ -1,8 +1,8 @@
 require("dotenv").config()
 const express = require('express')
-const session = require("express-session")
 const app = express()
 const path = require("path")
+const cors = require("cors");
 const mongoose = require('mongoose');
 
 mongoose.connect(process.env.DATABASE_URL);
@@ -14,13 +14,7 @@ connection.once('open', function () {
     console.log('Connect Error: ', error);
 });
 
-app.use(
-    session({
-        secret: 'admin123',
-        resave: false,
-        saveUninitialized: true
-    })
-)
+cors()(req, res, () => {});
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 app.use('/public', express.static(path.join(__dirname, 'public')))
