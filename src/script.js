@@ -28,7 +28,7 @@ function submitForm() {
       message: messageInput.value
   };
 
-  fetch('/new_visitor', {
+  fetch('https://personal-website-y81r.onrender.com/new_visitor', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
