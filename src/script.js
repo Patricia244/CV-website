@@ -30,7 +30,7 @@ function submitForm() {
     message: messageInput.value
   };
 
-  fetch('gapiUrl/new_visitor', {
+  fetch('apiUrl/new_visitor', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
