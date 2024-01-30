@@ -58,7 +58,6 @@ function submitForm() {
 
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('form').addEventListener('submit', function (event) {
-      console.log("Form submitted");
       event.preventDefault();
       submitForm();
   });
