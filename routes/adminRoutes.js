@@ -1,10 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const AdminModel = require("../model/adminModel")
-const VisitorsModel = require("../model/visitorModel")
-const authMiddleware = require('../middleware/authMiddleware');
-
-
 
 router.post("/login", async (req, res) => {
     const { userName, password } = req.body
@@ -18,15 +14,4 @@ router.post("/login", async (req, res) => {
         res.status(400).json({ message: error.message });
     }
 });
-
-// router.get("/login", async (req, res) => {
-//     try {
-//         router.use(authMiddleware);
-//         const visitors = await VisitorsModel.find();
-//         res.status(201).send(visitors);
-//     } catch (error) {
-//         res.status(500).json({ message: error.message });
-//     }
-// });
-
 module.exports = router;
