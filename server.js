@@ -14,8 +14,9 @@ connection.once('open', function () {
     console.log('Connect Error: ', error);
 });
 
+app.use(cors());
 app.use(cors({ origin: 'https://strong-nasturtium-61fa5a.netlify.app' }))
-cors()(req, res, () => {});
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 app.use('/public', express.static(path.join(__dirname, 'public')))
