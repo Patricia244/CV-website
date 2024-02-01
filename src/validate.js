@@ -37,6 +37,7 @@ function email_Verify() {
     return true;
   }
 }
+
 function name_Verify() {
   if (names.value.length >= 5) {
     names.style.border = "1px solid silver";
