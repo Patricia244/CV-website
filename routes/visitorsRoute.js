@@ -4,10 +4,9 @@ const VisitorsModel = require("../model/visitorModel");
 
 router.post("/new_visitor", async (req, res) => {
 
-    const { name, dateOfVisit, email, message } = req.body
+    const { name, email, message } = req.body
     const visitor = new VisitorsModel({
         name: name,
-        dateOfVisit: dateOfVisit,
         email: email,
         message: message,
     });
