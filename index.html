@@ -148,37 +148,36 @@
         <h1>CONTACT</h1>
         <div class="form" id="visitor-form">
           <form
-            action="/new_visitor"
-            method="POST"
-            class="form"
-            id="form"
-            name="form"
-            onsubmit="return validate()"
-          >
-            <input
-              type="text"
-              id="name"
-              name="name"
-              class="input"
-              placeholder="Enter Your Name"
-            />
-            <div id="name-error">Please fill up Email or Phone Number</div>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="input"
-              placeholder="Enter Your Email"
-            />
-            <div id="email-error">Please fill up Email or Phone Number</div>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Enter Your Message"
-            ></textarea>
-            <div id="message-error">please enter at least 30 characters</div>
-            <input type="submit" value="Submit" id="submit" />
-          </form>
+          action="/new_visitor"
+          method="POST"
+          class="form"
+          id="form"
+          name="form"
+        >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="input"
+            placeholder="Enter Your Name"
+          />
+          <div id="name-error">Please enter your name</div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="input"
+            placeholder="Enter Your Email"
+          />
+          <div id="email-error">Please fill up Email or Phone Number</div>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Enter Your Message"
+          ></textarea>
+          <div id="message-error">please enter at least 30 characters</div>
+          <input type="submit" value="Submit" id="submit" />
+        </form>
         </div>
       </div>
       <div class="social-container">
