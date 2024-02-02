@@ -44,7 +44,6 @@ function submitForm() {
         nameInput.value = "";
         emailInput.value = "";
         messageInput.value = "";
-        dateInput.value = "";
       } else {
         console.error("Form submission failed:", data.message);
       }
