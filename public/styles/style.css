@@ -369,13 +369,11 @@ textarea {
 }
 
 .social-icons {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
-  margin: 0;
-  background-color: #000000;
+  margin-top:  100px;
 }
 
 .social-icons a:hover {
