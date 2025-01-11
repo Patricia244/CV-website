@@ -39,7 +39,7 @@ function submitForm() {
       if (data.success) {
         setTimeout(() => {
           successMessage.innerHTML = "";
-        },5000);
+        }, 5000);
         successMessage.innerHTML = "Form submitted successfully!";
         nameInput.value = "";
         emailInput.value = "";
@@ -53,9 +53,54 @@ function submitForm() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    submitForm();
-  });
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.getElementById("form").addEventListener("submit", function (event) {
+//     event.preventDefault();
+//     submitForm();
+//   });
+// });
+document.addEventListener("DOMContentLoaded", () => {
+  const descriptions = document.querySelectorAll(".time-line-description");
+  const line = document.querySelector(".line");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("sticky");
+        } else {
+          entry.target.classList.remove("sticky");
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+  descriptions.forEach((description) => observer.observe(description));
+});
+
+const swiper = new Swiper('.slider-wrapper', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    620: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
 });

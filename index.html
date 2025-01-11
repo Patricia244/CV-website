@@ -12,7 +12,11 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./public/styles/style.css" />
-    <link rel="shortcut icon" href="">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="shortcut icon" href="" />
     <script
       src="https://kit.fontawesome.com/4fcd54d10c.js"
       crossorigin="anonymous"
@@ -30,6 +34,7 @@
           <li class="nav-item"><a href="#home-section">Home</a></li>
           <li class="nav-item"><a href="#about-section"> About</a></li>
           <li class="nav-item"><a href="#skills-section">Skills</a></li>
+          <li class="nav-item"><a href="#projects-section">Projects</a></li>
           <li class="nav-item"><a href="#contact-section">Contact Me</a></li>
         </ul>
       </div>
@@ -46,7 +51,6 @@
         </p>
       </div>
     </section>
-
     <section id="about-section">
       <div id="about">
         <img id="about-img" src="./public/images/about.jpeg" alt="My Pic" />
@@ -67,115 +71,150 @@
       </div>
     </section>
 
-    <section id="skills-section">
-      <div class="title">
+    <section id="skills-section" class="swiper">
+      <div class="skills-container slider-wrapper">
         <h2>SKILLS</h2>
-      </div>
-
-      <div class="box">
-        <div class="card">
-          <i class="fa-solid fa-code"></i>
-          <h5>Programming languages</h5>
-          <div class="text">
-            <p>
-              <span>- HTML:</span> Proficient in writing semantic and accessible
-              HTML markup for web development projects.
-              <span>- CSS:</span> Experienced in styling web pages using CSS,
-              including responsive design techniques.
-              <span> <br />- JavaScript:</span>
-              Skilled in building interactive and dynamic user interfaces with
-              JavaScript, including ES6+ features and modern
-              frameworks/libraries.
-            </p>
+        <div class="cards swiper-wrapper">
+          <div class="card swiper-slide">
+            <img src="./public/images/React.png" class="skill-image" alt="React" />
+            <p class="title">React</p>
+          </div>
+          <div class="card swiper-slide">
+            <img src="./public/images/Angular.png" class="skill-image" alt="Angular" />
+            <p class="title">Angular Js</p>
+          </div>
+          <div class="card swiper-slide">
+            <img src="./public/images/JavaScript.png" class="skill-image" alt="JavaScript" />
+            <p class="title">JavaScript</p>
+          </div>
+          <div class="card swiper-slide">
+            <img src="./public/images/CSS3.png" class="skill-image" alt="CSS" />
+            <p class="title">CSS</p>
+          </div>
+          <div class="card swiper-slide">
+            <img src="./public/images/React.png" class="skill-image" alt="HTML" />
+            <p class="title">HTML</p>
+          </div>
+          <div class="card swiper-slide">
+            <img src="./public/images/TypeScript.png" class="skill-image" alt="TypeScript" />
+            <p class="title">TypeScript</p>
+          </div>
+          <div class="card swiper-slide">
+            <img src="./public/images/icons8-microsoft-sql-server-48.png" class="skill-image" alt="SQL Server" />
+            <p class="title">Microsoft SQL Server</p>
+          </div>
+          <div class="card swiper-slide">
+            <img src="./public/images/icons8-github-64.png" class="skill-image" alt="GitHub" />
+            <p class="title">GitHub</p>
           </div>
         </div>
-
-        <div class="card">
-          <i class="fa-solid fa-laptop-code"></i>
-          <h5>Frontend Development</h5>
-          <div class="text">
-            <p>
-              <span>- React.js:</span> Proficiency in building single-page
-              applications (SPAs) and reusable UI components using React.js,
-              including state management with Redux or context API. <br /><span
-                >- CSS:</span
-              >
-              Expertise in writing modular and maintainable CSS code.
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <i class="fa-solid fa-bars"></i>
-          <h5>Backend Development</h5>
-          <div class="text">
-            <p>
-              <span>- Node.js:</span> Experienced in building efficient
-              server-side applications using Node.js, including RESTful APIs and
-              database interactions. <br /><span>- PostgreSQL (PSQL):</span>
-              Proficient in designing and managing relational databases with
-              PostgreSQL, including querying. <br /><span>- RESTful API:</span>
-              Skilled in designing and implementing RESTful APIs to facilitate
-              communication between frontend and backend systems.
-            </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <i class="fa-solid fa-code-branch"></i>
-          <h5>Version Control</h5>
-          <div class="text">
-            <p>
-              <span>- Git:</span> Proficient in version control using Git,
-              including branching strategies, resolving conflicts, and
-              collaborating with team members effectively. <br /><span
-                >- GitHub:</span
-              >
-              Experienced in using GitHub for hosting code repositories,
-              managing project workflows, and contributing to open-source
-              projects.
-            </p>
-          </div>
-        </div>
+    
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        
       </div>
     </section>
+    
+    <section>
+      <h2>Projects</h2>
+    </section>
+    <!-- <section class="projects" id="projects-section">
+      <div class="timeline">
+        <div class="line"></div>
+        <div class="time-line-description">
+          <div class="mini-circle"></div>
+          <div class="content">
+            <h2 class="content-timeline-title">Programming languages</h2>
+            <p class="content-timeline-description">
+              <span>- HTML:</span> Proficient in writing semantic and accessible
+              HTML markup for web development projects.
+            </p>
+          </div>
+        </div>
+        <div class="time-line-description">
+          <div class="mini-circle"></div>
+          <div class="content">
+            <h2 class="content-timeline-title">Programming languages</h2>
+            <p class="content-timeline-description">
+              <span>- HTML:</span> Proficient in writing semantic and accessible
+              HTML markup for web development projects
+            </p>
+          </div>
+        </div>
+        <div class="time-line-description">
+          <div class="mini-circle"></div>
+          <div class="content">
+            <h2 class="content-timeline-title">Programming languages</h2>
+            <p class="content-timeline-description">
+              <span>- HTML:</span> Proficient in writing semantic and accessible
+              HTML markup for web development projects.
+              <span>- CSS:</span> Experienced in styling web pages using
+            </p>
+          </div>
+        </div>
+        <div class="time-line-description">
+          <div class="mini-circle"></div>
+          <div class="content">
+            <h2 class="content-timeline-title">Programming languages</h2>
+            <p class="content-timeline-description">
+              <span>- HTML:</span> Proficient in writing semantic and accessible
+              HTML markup for web development projects.
+            </p>
+          </div>
+        </div>
+        <div class="time-line-description">
+          <div class="mini-circle"></div>
+          <div class="content">
+            <h2 class="content-timeline-title">Programming languages</h2>
+            <p class="content-timeline-description">
+              <span>- HTML:</span> Proficient in writing semantic and accessible
+              HTML markup for web development projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
-    <section id="contact-section">
+    <!-- <section id="contact-section">
       <div id="contact">
         <h1>CONTACT</h1>
         <div id="success-message"></div>
         <div class="form" id="visitor-form">
           <form
-          action="/new_visitor"
-          method="POST"
-          class="form"
-          id="form"
-          name="form"
-        >
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="input"
-            placeholder="Enter Your Name"
-          />
-          <div id="name-error">Please enter your name</div>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="input"
-            placeholder="Enter Your Email"
-          />
-          <div id="email-error">Please fill up Email or Phone Number</div>
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Enter Your Message"
-          ></textarea>
-          <div id="message-error">please enter at least 30 characters</div>
-          <input type="submit" value="Submit" id="submit" />
-        </form>
+            action="/new_visitor"
+            method="POST"
+            class="form"
+            id="form"
+            name="form"
+          >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="input"
+              placeholder="Enter Your Name"
+            />
+            <div id="name-error">Please enter your name</div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="input"
+              placeholder="Enter Your Email"
+            />
+            <div id="email-error">Please fill up Email or Phone Number</div>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Enter Your Message"
+            ></textarea>
+            <div id="message-error">please enter at least 30 characters</div>
+            <input type="submit" value="Submit" id="submit" />
+          </form>
         </div>
         <div class="social-container">
           <div class="social-icons">
@@ -185,19 +224,19 @@
             >
               <i class="fab fa-linkedin"></i
             ></a>
-  
+
             <a href="https://github.com/Patricia244" target="blank">
               <i class="fab fa-github"></i
             ></a>
-  
+
             <a href="tel:0738918236">
               <i class="fa fa-phone-square" aria-hidden="true"></i
             ></a>
           </div>
         </div>
       </div>
- 
-    </section>
+    </section> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./src/script.js"></script>
     <script src="./src/validate.js"></script>
   </body>
