@@ -53,7 +53,6 @@
     </section>
     <section id="about-section">
       <div id="about">
-        <img id="about-img" src="./public/images/about.jpeg" alt="My Pic" />
         <div id="about-text">
           <h2 class="heading">ABOUT ME</h2>
           <h2>Software <span>Developer</span></h2>
@@ -70,7 +69,6 @@
         </div>
       </div>
     </section>
-
     <section id="skills-section" class="swiper">
       <div class="skills-container slider-wrapper">
         <h2 class="heading">SKILLS</h2>
@@ -114,8 +112,6 @@
         
       </div>
     </section>
-    
- 
      <section class="projects" id="projects-section">
       <div></div>
         <h2 class="heading">Projects</h2>
@@ -178,19 +174,18 @@
         </div>
       </div>
       </section>
-     
     </section>
-
      <section id="contact-section">
       <div id="contact">
         <h1>CONTACT</h1>
         <div id="success-message"></div>
         <div class="form" id="visitor-form">
           <form
-            action="/new_visitor"
+            action="https://formsubmit.co/patriciaslindile5@gmail.com"
             method="POST"
             id="form"
             name="form"
+            onsubmit="return validate()"
           >
             <input
               type="text"
@@ -214,7 +209,7 @@
               placeholder="Enter Your Message"
             ></textarea>
             <div id="message-error">please enter at least 30 characters</div>
-            <input type="submit" value="Submit" id="submit" />
+            <button type="submit" value="Submit" id="submit">Submit</button>
           </form>
         </div>
         <div class="social-container">
