@@ -97,3 +97,18 @@ const swiper = new Swiper('.slider-wrapper', {
     },
   },
 });
+
+function addLinkListener(elementId, link) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.addEventListener('click', () => {
+      window.open(link, '_blank');
+    });
+  } else {
+    console.warn(`Element with ID "${elementId}" not found.`);
+  }
+}
+
+addLinkListener('play-tic-tac-toe', 'https://tic-tac-toe-2ebb51.netlify.app');
+addLinkListener('play-memory-game', 'https://222-memory.netlify.app');
+addLinkListener('view-recipe-search', 'https://recipe-search-dbcd6b.netlify.app/');

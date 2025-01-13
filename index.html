@@ -46,7 +46,7 @@
           SILINDILE MADLALA
         </h1>
         <p>
-          web developer <br />
+          Software developer <br />
           <br />
         </p>
       </div>
@@ -56,7 +56,7 @@
         <img id="about-img" src="./public/images/about.jpeg" alt="My Pic" />
         <div id="about-text">
           <h2 class="heading">ABOUT ME</h2>
-          <h2>Web <span>Developer</span></h2>
+          <h2>Software <span>Developer</span></h2>
           <p>
             Im a dedicated web developer with a passion for learning and growing
             within the industry, I bring a unique blend of skills and qualities
@@ -92,7 +92,7 @@
             <p class="title">CSS</p>
           </div>
           <div class="card swiper-slide">
-            <img src="./public/images/React.png" class="skill-image" alt="HTML" />
+            <img src="./public/images/html.png" class="skill-image" alt="HTML" />
             <p class="title">HTML</p>
           </div>
           <div class="card swiper-slide">
@@ -100,11 +100,11 @@
             <p class="title">TypeScript</p>
           </div>
           <div class="card swiper-slide">
-            <img src="./public/images/icons8-microsoft-sql-server-48.png" class="skill-image" alt="SQL Server" />
+            <img src="./public/images/msql.png" class="skill-image" alt="SQL Server" />
             <p class="title">Microsoft SQL Server</p>
           </div>
           <div class="card swiper-slide">
-            <img src="./public/images/icons8-github-64.png" class="skill-image" alt="GitHub" />
+            <img src="./public/images/github.png" class="skill-image" alt="GitHub" />
             <p class="title">GitHub</p>
           </div>
         </div>
@@ -117,31 +117,71 @@
     
  
      <section class="projects" id="projects-section">
+      <div></div>
         <h2 class="heading">Projects</h2>
         <div class="card-list">
           <div class="card-item">
-            <img src="./public/images/tic tac toe.png" class="project-image" alt="React" />
-            <p class="title">Tic Tac Toe</p>
-            <!-- https://tic-tac-toe-2ebb51.netlify.app -->
-            <button>Play</button>
-          </div>
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./public/images/tic tac toe.png" class="project-image" alt="Tic Tac Toe" />
+                <p class="title">Tic Tac Toe</p>
+              </div>
+              <div class="card-back">
+                <h3>Tech Stack</h3>
+                <ul>
+                  <li>Html5</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+                <button id="play-tic-tac-toe">Play</button>
+              </div>
+            </div>
+          </div> 
           <div class="card-item">
-            <img src="./public/images/memory game.png" class="project-image" alt="Angular" />
-            <p class="title">Memory game</p>
-            <button>Play</button>
-          </div>
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./public/images/memory game.png" class="project-image" alt="Tic Tac Toe" />
+                <p class="title">Memory Game</p>
+              </div>
+              <div class="card-back">
+                <h3>Tech Stack</h3>
+                <ul>
+                  <li>React.js</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+                <button id="play-memory-game">Play</button>
+              </div>
+            </div>
+          </div> 
+
           <div class="card-item">
-            <img src="./public/images/recipe search.png" class="project-image" alt="JavaScript" />
-            <p class="title">Recipe Search</p>
-            <button>View</button>
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="./public/images/recipe search.png" class="project-image" alt="Tic Tac Toe" />
+                <p class="title">Recipe Search</p>
+              </div>
+              <div class="card-back">
+                <h3>Tech Stack</h3>
+                <ul>
+                  <li>React.js</li>
+                  <li>Redux</li>
+                  <li>CSS</li>
+                  <li>RestApi</li>
+                </ul>
+                <button id="view-recipe-search">View</button>
+              </div>
+            </div>
           </div>
+       
+         
         </div>
       </div>
       </section>
      
     </section>
 
-    <!-- <section id="contact-section">
+     <section id="contact-section">
       <div id="contact">
         <h1>CONTACT</h1>
         <div id="success-message"></div>
@@ -149,7 +189,6 @@
           <form
             action="/new_visitor"
             method="POST"
-            class="form"
             id="form"
             name="form"
           >
@@ -197,7 +236,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section> 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./src/script.js"></script>
     <script src="./src/validate.js"></script>
